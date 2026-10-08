@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Fixed Asset Recording Form for PT LYSA ALTERA</title>
+</head>
+<body>
+
+    <h1>Company Fixed Asset Recording Form for PT LYSA ALTERA</h1>
+    <form method="post" action="#" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Asset Identification</legend>
+
+            <p>
+                <label for="assetName">Asset Name:</label><br>
+                <input type="text" id="assetName" name="assetName"
+                required placeholder="Automated Production Machine">
+            </p>
+            <p>
+                <label for="assetCode">Asset Code:</label><br>
+                <input type="text" id="assetCode" name="assetCode"
+                required placeholder="FA-001">
+            </p>
+            <p>
+                <label for="serialNumber">Asset Serial Number:</label><br>
+                <input type="text" id="serialNumber" name="serialNumber"
+                placeholder="SN2025001">
+            </p>
+            <p>
+                <label for="assetCategory">Asset Category:</label><br>
+                <select id="assetCategory" name="assetCategory" required>
+                    <option value="">-- Select Asset Category --</option>
+                    <option value="Vehicle">Vehicle</option>
+                    <option value="Machinery">Machinery</option>
+                    <option value="Building">Building</option>
+                    <option value="Office Equipment">Office Equipment</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Land">Land</option>
+                    <option value="Software">Software</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Acquisition Details</legend>
+
+            <p>
+                <label for="acquisitionDate">Acquisition Date:</label><br>
+                <input type="date" id="acquisitionDate"
+                name="acquisitionDate" required>
+            </p>
+            <p>
+                <label for="acquisitionValue">Acquisition Value / Purchase Price:</label><br>
+                <input type="number" id="acquisitionValue"
+                name="acquisitionValue" min="0" step="1000"
+                required placeholder="50000000">
+            </p>
+            <p>
+                Acquisition Method:<br>
+
+                <input type="radio" id="cashPurchase"
+                name="acquisitionMethod"
+                value="Cash Purchase" required>
+                <label for="cashPurchase">Cash Purchase</label><br>
+
+                <input type="radio" id="creditPurchase"
+                name="acquisitionMethod"
+                value="Credit Purchase">
+                <label for="creditPurchase">Credit Purchase</label><br>
+
+                <input type="radio" id="financeLease"
+                name="acquisitionMethod"
+                value="Finance Lease">
+                <label for="financeLease">Finance Lease</label><br>
+
+                <input type="radio" id="donation"
+                name="acquisitionMethod"
+                value="Donation">
+                <label for="donation">Donation</label>
+            </p>
+            <p>
+                <label for="vendor">Vendor/Supplier:</label><br>
+                <input type="text" id="vendor" name="vendor"
+                required>
+            </p>
+            <p>
+                <label for="acquisitionProof">Upload Acquisition Proof:</label><br>
+                <input type="file" id="acquisitionProof"
+                name="acquisitionProof"
+                accept=".pdf,.jpg,.png">
+            </p>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Depreciation Information</legend>
+
+            <p>
+                <label for="usefulLife">Useful Life (Years):</label><br>
+                <input type="number" id="usefulLife"
+                name="usefulLife"
+                min="1" max="50"
+                required placeholder="5">
+            </p>
+            <p>
+                <label for="salvageValue">Salvage Value:</label><br>
+                <input type="number" id="salvageValue"
+                name="salvageValue"
+                min="0" step="1000"
+                required placeholder="5000000">
+            </p>
+            <p>
+                <label for="depreciationMethod">Depreciation Method:</label><br>
+                <select id="depreciationMethod"
+                name="depreciationMethod" required>
+                    <option value="">-- Select Depreciation Method --</option>
+                    <option value="Straight-Line">Straight-Line</option>
+                    <option value="Declining Balance">Declining Balance</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Responsible Person & Location</legend>
+
+            <p>
+                <label for="responsiblePerson">Responsible Person's Name:</label><br>
+                <input type="text" id="responsiblePerson"
+                name="responsiblePerson"
+                required>
+            </p>
+            <p>
+                <label for="department">User Department:</label><br>
+                <input type="text" id="department"
+                name="department"
+                required placeholder="Production / Accounting">
+            </p>
+            <p>
+                <label for="assetLocation">Asset Physical Location:</label><br>
+                <input type="text" id="assetLocation"
+                name="assetLocation"
+                required placeholder="3rd Floor, Main Building">
+            </p>
+            <p>
+                <label for="responsibleEmail">Responsible Person's Email:</label><br>
+                <input type="email" id="responsibleEmail"
+                name="responsibleEmail"
+                required placeholder="name@company.com">
+            </p>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+</body>
+</html>

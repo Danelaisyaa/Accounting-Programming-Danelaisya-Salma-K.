@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Salary Form</title>
+    <link rel="stylesheet" href="form_styles.css">
+</head>
+
+<body>
+
+    <h1>Employee Salary Form</h1>
+
+    <form method="post" action="#">
+
+        <fieldset>
+            <legend>Employee Information</legend>
+
+            <p>
+                <label for="employeeName">Employee Name:</label><br>
+                <input type="text" id="employeeName" name="employeeName" required>
+            </p>
+
+            <p>
+                <label for="employeeId">Employee ID:</label><br>
+                <input type="text" id="employeeId" name="employeeId" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <p>
+                <label for="birthDate">Birth Date:</label><br>
+                <input type="date" id="birthDate" name="birthDate" required>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Salary Information</legend>
+
+            <p>
+                <label for="basicSalary">Basic Salary:</label><br>
+                <input type="number" id="basicSalary" name="basicSalary" required>
+            </p>
+
+            <p>
+                <label for="salaryMonth">Salary Month:</label><br>
+                <input type="month" id="salaryMonth" name="salaryMonth" required>
+            </p>
+
+            <p>
+                <label for="department">Department:</label><br>
+                <select id="department" name="department" required>
+                    <option value="">-- Select Department --</option>
+                    <option value="Accounting">Accounting</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Human Resources">Human Resources</option>
+                </select>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Employment Type</legend>
+
+            <p>
+                <input type="radio" id="fullTime" name="employmentType" value="Full Time" required>
+                <label for="fullTime">Full Time</label><br>
+
+                <input type="radio" id="partTime" name="employmentType" value="Part Time">
+                <label for="partTime">Part Time</label>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <p>
+                <label for="notes">Notes:</label><br>
+                <textarea id="notes" name="notes" rows="5" cols="40"></textarea>
+            </p>
+
+            <p>
+                <input type="checkbox" id="allowance" name="allowance" value="Yes">
+                <label for="allowance">Include Allowance</label>
+            </p>
+
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+
+    </form>
+
+</body>
+
+</html>

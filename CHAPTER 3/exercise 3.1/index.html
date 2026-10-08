@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee & Salary Data Form</title>
+</head>
+<body>
+    <h1>Employee Data and Salary Payment Input form</h1>
+    <form method="post" action="#">
+        <fieldset>
+            <legend>Employee Information</legend>
+            <p>
+                <label for="employeeName">Full Name:</label>
+                <input type="text" id="employeeName" name="employeeName" required placeholder="Employee's full name">
+            </p>
+            <p>
+                <label for="employeeID">Employee ID:</label>
+                <input type="text" id="employeeID" name="employeeID" required placeholder="Employee ID/NIK">
+            </p>
+            <P>
+                <Label for="dob">Date of Birth:</Label>
+                <input type="date" id="dob" name="dob" required>
+            </P>
+            <p>
+                Gender:<br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </p>
+            <p>
+                <label for="employeeEmail">Email Address:</label><br>
+                <input type="email" id="employeeEmail" name="employeeEmail" placeholder="email@company.com">
+            </p>
+            <p>
+                <label for="employeePhone">Phone Number:</label><br>
+                <input type="tel" id="employeePhone" name="employeePhone" placeholder="+62 812 3456 7890">
+            </p>
+            <p>
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" placeholder="Accounting Manager / Tax Staff">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Salary Payment Details</legend>
+            <p>
+                <label for="salaryPeriod">Salary Period:</label><br>
+                <input type="month" id="salaryPeriod" name="salaryPeriod" required>
+            </p>
+            <p>
+                <label for="basicSalary">Basic Salary:</label><br>
+                <input type="number" id="basicSalary" name="basicSalary" min="0" step="1000" required placeholder="Example: 5000000">
+            </p>
+            <p>
+                <label for="transportAllowance">Transport Allowance (IDR) :</label><br>
+                <input type="number" id="transportAllowance" name="transportAllowance" min="0" step="500"  value="0">
+            </p>
+            <p>
+                <label for="bpjsDeduction">BPJS Deduction (IDR) :</label><br>
+                <input type="number" id="bpjsDeduction" name="bpjsDeduction" min="0" step="100" value="0">
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Submit Salary Data">
+            <input type="reset" value="Reset Form">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #fab3b3;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+#general-journal-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background-color: #ff5454;
+}
+
+.highlight-row {
+    background-color: #ff7777;
+    font-weight: bold;
+}
+
+td:nth-child(5),
+td:nth-child(6) {
+    text-align: right;
+}

@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.financial-card {
+    background-color: rgb(234, 140, 140);
+    color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    margin: 20px auto;
+}
+
+.financial-card h2 {
+    color: #2c3e50;
+}
+
+.financial-card p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.financial-card:hover {
+    transform: translateY(-5px);
+}
