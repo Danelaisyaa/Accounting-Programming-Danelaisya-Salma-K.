@@ -1,8 +1,20 @@
 body {
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f9f9f9;
+    color: #333333;
+    background-color: #f8f9fc;
+    background-image:
+        linear-gradient(
+            rgba(248, 240, 246, 0.68),
+            rgba(248, 240, 246, 0.68)
+        ),
+        url("images/office.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 header {
@@ -10,34 +22,50 @@ header {
     color: white;
     text-align: center;
     padding: 25px;
+    border-radius: 8px;
 }
 
 header h1 {
     font-size: 2em;
+    margin-top: 0;
 }
 
 header h2 {
     font-size: 1.5em;
 }
 
-footer {
-    background-color: #a1008b;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
+header p {
+    margin-bottom: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2,
+section h3 {
+    color: #831843;
+    margin-bottom: 15px;
 }
 
 #balance-sheet {
     width: 90%;
     border-collapse: collapse;
     margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(131, 24, 67, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 #balance-sheet th,
 #balance-sheet td {
-    border: 1px solid #ccc;
+    border: 1px solid #e5c8d8;
     padding: 10px;
     text-align: left;
 }
@@ -47,28 +75,91 @@ footer {
     color: white;
 }
 
-#balance-sheet tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+#balance-sheet thead th {
+    padding: 14px 10px;
 }
 
-#balance-sheet tfoot {
-    background-color: #e0e0e0;
+#balance-sheet tbody tr:nth-child(even) {
+    background-color: #fcebf4;
+}
+
+#balance-sheet tbody tr.category-total {
+    background-color: #f7cde3;
+    color: #831843;
     font-weight: bold;
 }
 
-.amount {
-    text-align: right !important;
+#balance-sheet .amount {
+    text-align: right;
+    white-space: nowrap;
+}
+
+#balance-sheet tfoot {
+    background-color: #eab5d3;
+    color: #72134b;
+    font-weight: bold;
+}
+
+#balance-sheet tfoot th {
+    padding: 12px 10px;
+}
+
+.equity-section {
+    background-color: rgba(255, 255, 255, 0.94);
+    padding: 20px 25px;
+    border-left: 5px solid #a81187;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(131, 24, 67, 0.10);
 }
 
 .equity-summary {
     margin-left: 20px;
     padding-left: 20px;
     font-size: 1em;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
-section h2,
-section h3 {
-    color: #2c3e50;
-    margin-bottom: 15px;
+.equity-summary li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #a1008b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 6px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 18px 12px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    #balance-sheet {
+        width: 100%;
+        font-size: 0.85em;
+    }
+
+    #balance-sheet th,
+    #balance-sheet td {
+        padding: 7px 5px;
+    }
+
+    .equity-section {
+        padding: 15px;
+    }
 }
