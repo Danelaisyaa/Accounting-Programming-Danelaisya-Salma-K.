@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #a81187;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header h2 {
+    font-size: 1.5em;
+}
+
+footer {
+    background-color: #a1008b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+#balance-sheet {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#balance-sheet th,
+#balance-sheet td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#balance-sheet thead {
+    background-color: #ad007f;
+    color: white;
+}
+
+#balance-sheet tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#balance-sheet tfoot {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.amount {
+    text-align: right !important;
+}
+
+.equity-summary {
+    margin-left: 20px;
+    padding-left: 20px;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+section h2,
+section h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
