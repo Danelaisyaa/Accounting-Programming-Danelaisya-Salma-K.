@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff7fb;
+    color: #4a2435;
+}
+
+header {
+    background-color: #9d174d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h2 {
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(131, 24, 67, 0.10);
+}
+
+section h2 {
+    color: #9d174d;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#journalForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #831843;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #e9a8c5;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #be185d;
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
+}
+
+.form-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9d174d;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #be185d;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#transactionTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+#transactionTable th,
+#transactionTable td {
+    border: 1px solid #f3c4d8;
+    padding: 12px;
+    text-align: left;
+}
+
+#transactionTable thead {
+    background-color: #9d174d;
+    color: white;
+}
+
+#transactionTable tbody tr:nth-child(even) {
+    background-color: #fdf2f8;
+}
+
+#transactionTable td:nth-child(5),
+#transactionTable td:nth-child(6) {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    padding: 7px 12px;
+}
+
+.delete-btn:hover {
+    background-color: #bd2130;
+}
+
+footer {
+    background-color: #831843;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 18px 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    #journalForm {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .form-buttons button {
+        width: 100%;
+    }
+
+    #transactionTable {
+        min-width: 850px;
+    }
+}

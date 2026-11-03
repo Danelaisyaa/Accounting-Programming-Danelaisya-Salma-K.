@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive General Journal Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PT LYSA ALTERA</h1>
+        <h2>Interactive General Journal Form</h2>
+        <p>General Journal Transaction Recording</p>
+    </header>
+
+    <main>
+        <section class="journal-form-section">
+            <h2>Journal Transaction Input</h2>
+
+            <form id="journalForm">
+                <div class="form-group">
+                    <label for="journalDate">Date:</label>
+                    <input type="date" id="journalDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="refNo">Ref. No.:</label>
+                    <input type="text" id="refNo"
+                           placeholder="Example: JV-001" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input type="text" id="description"
+                           placeholder="Enter transaction description"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label for="account">Account:</label>
+                    <select id="account" required>
+                        <option value="">Select Account</option>
+                        <option value="Cash">Cash</option>
+                        <option value="Bank">Bank</option>
+                        <option value="Accounts Receivable">Accounts Receivable</option>
+                        <option value="Service Revenue">Service Revenue</option>
+                        <option value="Salaries Expense">Salaries Expense</option>
+                        <option value="Accounts Payable">Accounts Payable</option>
+                        <option value="Share Capital">Share Capital</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="debit">Debit (IDR):</label>
+                    <input type="number" id="debit"
+                           min="0" step="1000" placeholder="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="credit">Credit (IDR):</label>
+                    <input type="number" id="credit"
+                           min="0" step="1000" placeholder="0">
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" id="addTransactionBtn">
+                        Add Transaction Row
+                    </button>
+
+                    <button type="button" id="saveJournalBtn">
+                        Save Journal (Dummy)
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="journal-table-section">
+            <h2>General Journal Transactions</h2>
+
+            <div class="table-container">
+                <table id="transactionTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Ref. No.</th>
+                            <th>Description</th>
+                            <th>Account</th>
+                            <th>Debit (IDR)</th>
+                            <th>Credit (IDR)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="transactionTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PT LYSA ALTERA. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
